@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using Awesomium.Core;
+using System.IO;
+using System.Diagnostics;
 using System.Web;
 using System.Net;
 
@@ -60,5 +62,29 @@ namespace WinMessage
                 
             }
         }
+
+        private void WinMessage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+        	WebCore.Shutdown();
+        	DeleteCache();
+        	Application.Exit();
+        }
+        private void DeleteCache()
+		{
+		  ProcessStartInfo info = new ProcessStartInfo();
+		  // get the full path to the Awesomium cache directory
+		  string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Cache");
+		  string command = String.Format("RMDIR /S /Q \"{0}\"", path);
+		
+		  // get the path to cmd.exe
+		  info.FileName = System.Environment.GetEnvironmentVariable("COMSPEC") ?? "cmd.exe";
+		
+		  // append the cmd.exe flags to disable auto-run scripts (/D) and to exit at completion (/C)
+		  info.Arguments = String.Concat("/D /C ", command);
+		  info.WindowStyle = ProcessWindowStyle.Hidden;
+		
+		  // start the process without waiting for completion
+		  Process.Start(info);
+		}
     }
 }

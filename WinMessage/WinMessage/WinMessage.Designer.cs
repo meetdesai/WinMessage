@@ -56,6 +56,7 @@ namespace WinMessage
             this.Padding = new System.Windows.Forms.Padding(20, 30, 20, 20);
             this.ShadowType = MetroFramework.Forms.MetroFormShadowType.DropShadow;
             this.Text = "WinMessage";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.WinMessage_FormClosed);
             this.Load += new System.EventHandler(this.WinMessageLoad);
             this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.WinMessage_PreviewKeyDown);
             this.ResumeLayout(false);
