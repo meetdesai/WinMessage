@@ -11,7 +11,7 @@ in order to use WinMessage.
 # Get WinMessage
 ## You can download the latest build [here](https://github.com/0xFireball/WinMessage/releases/tag/v1.0.1).
 
-![Screenshot](screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/0xFireball/WinMessage/master/screenshot.PNG)
 
 # About/Server Requirements
 - WinMessage uses the Remote Messages server.
