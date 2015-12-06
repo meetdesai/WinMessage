@@ -1,0 +1,1 @@
+MsBuild.exe /t:Build /p:Configuration=Release /p:TargetFramework=v4.5

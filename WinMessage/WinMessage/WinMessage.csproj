@@ -8,8 +8,9 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>WinMessage</RootNamespace>
     <AssemblyName>WinMessage</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -30,7 +31,15 @@
     <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>message.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Awesomium.Core, Version=1.7.5.1, Culture=neutral, PublicKeyToken=e1a0d7c8071a5214" />
+    <Reference Include="Awesomium.Windows.Forms, Version=1.7.5.1, Culture=neutral, PublicKeyToken=9bd24830fbe304a0, processorArchitecture=x86" />
+    <Reference Include="EPFramework">
+      <HintPath>..\..\..\..\..\..\nihal\Programs\C#\ExaPhaser\EPFramework\EPFramework 0.2.0\MetroFramework\bin\Release\EPFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -43,6 +52,9 @@
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Xml.Linq">
@@ -50,15 +62,34 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MainForm.cs" />
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="WinMessage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WinMessage.Designer.cs">
+      <DependentUpon>WinMessage.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="WinMessage.resx">
+      <DependentUpon>WinMessage.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="message.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
