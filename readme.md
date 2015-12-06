@@ -9,7 +9,7 @@ server called Remote Messages, which must be installed on your device
 in order to use WinMessage.
 
 # Get WinMessage
-## You can download the latest build [here]().
+## You can download the latest build [here](https://github.com/0xFireball/WinMessage/releases/tag/v1.0.1).
 
 # About/Server Requirements
 - WinMessage uses the Remote Messages server.
