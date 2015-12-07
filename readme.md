@@ -13,8 +13,8 @@ in order to use WinMessage.
 ![Screenshot](https://raw.githubusercontent.com/0xFireball/WinMessage/master/screenshot.PNG)
 
 # What's new in this version
-## Version 1.1.0 brings new features to the client, including integrated USB connection support with the new included USBTool program.
-
+## Version 1.1 brings new features to the client, including integrated USB connection support with the new included USBTool program.
+### Version 1.1.0
 - Now, you can connect to your iPhone/iPad when your computer does not have a network connection;
 as long as your device has MMS/SMS or cellular data network connectivity.
 - This works through the open-source tool iProxy; USBTool provides a graphical frontend for this tool.
