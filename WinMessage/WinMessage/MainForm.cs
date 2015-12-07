@@ -16,18 +16,40 @@ namespace WinMessage
 	/// </summary>
 	public partial class MainForm : MetroForm
 	{
+        internal string VERSION = "";
 		public MainForm()
 		{
 			//
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-			
+            VERSION = "1.1.1";
+            try
+            {
+                CheckForUpdate();
+            }
+            catch
+            { }
 			//
 			// TODO: Add constructor code after the InitializeComponent() call.
 			//
 		}
-		void Button1Click(object sender, EventArgs e)
+
+        private void CheckForUpdate()
+        {
+            string updateurl = "https://raw.githubusercontent.com/0xFireball/WinMessage/master/version.txt";
+            string newVersion = new System.Net.WebClient().DownloadString(updateurl);
+            if (newVersion != VERSION)
+            {
+                DialogResult dr = MessageBox.Show(String.Format("A new update is available! Version {0}.\nGo to the WinMessage page?", newVersion), "Update Available!", MessageBoxButtons.YesNo);
+                if (dr == DialogResult.Yes)
+                {
+                    System.Diagnostics.Process.Start("http://0xfireball.github.io/WinMessage/");
+                }
+            }
+        }
+
+        void Button1Click(object sender, EventArgs e)
 		{
             ConnectToServer();
 		}
@@ -71,6 +93,16 @@ namespace WinMessage
         private void button2_Click(object sender, EventArgs e)
         {
             new Toolbox().ShowDialog();
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://github.com/0xFireball/WinMessage/issues/new");
         }
     }
 }

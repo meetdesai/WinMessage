@@ -1,5 +1,5 @@
 # WinMessage - iMessage/Remote Messages client for Windows.
-<h2><a href="https://github.com/0xFireball/WinMessage/releases/download/v1.1.0/WinMessageSetup.exe" class="btn">Download Latest Build</a></h2>
+<h2><a href="https://github.com/0xFireball/WinMessage/releases/download/v1.1.1/WinMessageSetup.exe" class="btn">Download Latest Build</a></h2>
 
 Apple has had a history of being exclusive with its technologies.
 iMessage has been available on OSX for a long time, but Windows users
@@ -18,6 +18,10 @@ in order to use WinMessage.
 - Now, you can connect to your iPhone/iPad when your computer does not have a network connection;
 as long as your device has MMS/SMS or cellular data network connectivity.
 - This works through the open-source tool iProxy; USBTool provides a graphical frontend for this tool.
+
+### Version 1.1.1
+- Report issues from inside the app.
+- Update checker.
 
 # Get WinMessage
 ## You can download builds [here](https://github.com/0xFireball/WinMessage/releases/).
