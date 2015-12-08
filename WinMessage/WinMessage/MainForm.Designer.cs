@@ -175,7 +175,7 @@ namespace WinMessage
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(37, 13);
             this.label7.TabIndex = 12;
-            this.label7.Text = "v1.1.1";
+            this.label7.Text = "v1.1.2";
             // 
             // label8
             // 

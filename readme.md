@@ -1,5 +1,5 @@
 # WinMessage - iMessage/Remote Messages client for Windows.
-<h2><a href="https://github.com/0xFireball/WinMessage/releases/download/v1.1.1/WinMessageSetup.exe" class="btn">Download Latest Build</a></h2>
+<h2><a href="https://github.com/0xFireball/WinMessage/releases/download/v1.1.2/WinMessageSetup.exe" class="btn">Download Latest Build</a></h2>
 
 Apple has had a history of being exclusive with its technologies.
 iMessage has been available on OSX for a long time, but Windows users
@@ -22,6 +22,11 @@ as long as your device has MMS/SMS or cellular data network connectivity.
 ### Version 1.1.1
 - Report issues from inside the app.
 - Update checker.
+
+### Version 1.1.2
+- Fixed a bug that kept USBTool from opening.
+
+
 
 # Get WinMessage
 ## You can download builds [here](https://github.com/0xFireball/WinMessage/releases/).

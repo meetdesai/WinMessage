@@ -23,7 +23,7 @@ namespace WinMessage
 			// The InitializeComponent() call is required for Windows Forms designer support.
 			//
 			InitializeComponent();
-            VERSION = "1.1.1";
+            VERSION = "1.1.2";
             try
             {
                 CheckForUpdate();
